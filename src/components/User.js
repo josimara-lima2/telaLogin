@@ -1,10 +1,10 @@
 import React from "react"
 import Theme from './Theme/Theme'
-const User = () => {
+const User = (props) => {
     return(
        <Theme>
             <div>
-            page2
+                <span>{props.name}</span>
             </div>
        </Theme>
     )
