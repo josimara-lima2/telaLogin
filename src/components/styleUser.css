@@ -1,0 +1,13 @@
+.telaDados .card1{
+    height: 60px;;
+}
+
+.telaDados{
+    display: flex;
+   
+}
+
+.linkVoltar{
+    color: #FFF;
+    text-decoration: none;
+}

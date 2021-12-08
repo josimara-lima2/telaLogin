@@ -1,0 +1,16 @@
+.card{
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    margin:20px;
+    border-radius: 10px;
+}
+.card h1{
+    font-size: 25px;
+    padding: 10px 20px;
+}
+.card .content{
+    background-color: rgb(64, 119, 221);
+    max-height: 80px;
+    border-radius: 10px;
+}

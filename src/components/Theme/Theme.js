@@ -1,7 +1,7 @@
 import './styles.css'
 const Theme = (props) => {
     return(
-        <div>
+        <div className="theme">
             <header>Titulo</header>
             <div className="content">{props.children}</div>
             <footer></footer>

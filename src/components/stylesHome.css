@@ -1,0 +1,19 @@
+.telaLogin{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    
+}
+
+.telaLogin label{
+    margin:10px;
+}
+
+.telaLogin label input{
+    margin-left: 5px;
+    border-radius: 5px;;
+}
+
+.buttons button{
+    margin-left: 30px;;
+}
