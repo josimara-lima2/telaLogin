@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import React,{useState} from "react"
+import React,{useState,useEffect} from "react"
 import { useNavigate} from "react-router"
 import Theme from './Theme/Theme'
 import './stylesHome.css'
-import { addUser,listSelector } from "../store/reducers/usuarios"
+import { addUser,listSelector, login } from "../store/reducers/usuarios"
 import {Link} from 'react-router-dom'
 import {UseAppSelector,UseAppDispatch} from '../store/index'
 
@@ -18,11 +18,18 @@ const Cadastro = () => {
     const dispatch = UseAppDispatch()
     const list = UseAppSelector(listSelector)
     
-
+    
+    
    const handleCadastro = () => {
-      if(name !== '' && emailInput !== '' && passwordInput !== '' && passwordInput === passwordVerificaInput)
-           dispatch({nome:name,email:emailInput,passwoerd:passwordInput})
-            navigate('/')
+      if(name !== '' && emailInput !== '' && passwordInput !== '' && passwordInput === passwordVerificaInput){
+        dispatch(addUser({nome:name,email:emailInput,password:passwordInput,islogged:false}))
+        
+        navigate('/')
+        alert("Cadastrado com sucesso")
+        
+      }
+   
+
     }
    
     

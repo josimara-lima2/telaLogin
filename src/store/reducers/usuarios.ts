@@ -40,12 +40,17 @@ const listSlice = createSlice({
            })
         },
 
-        addUser(state,action:PayloadAction<UserState>){
-            state.usuarios.push(action.payload)
+        addUser(state,action:PayloadAction<{nome:string,email:string,password:string,islogged:boolean}>){
+            state.usuarios.push({nome:action.payload.nome,
+                email: action.payload.email,
+                senha:action.payload.password,
+                islogged:action.payload.islogged})
+            
         },
         logoutUser(state,action:PayloadAction<number>){
             state.usuarios[action.payload].islogged = false
-        }
+        },
+        
     }
 })
 

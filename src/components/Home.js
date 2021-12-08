@@ -1,8 +1,8 @@
-import React,{useState} from "react"
+import React,{useState, useEffect} from "react"
 import { useNavigate } from "react-router"
 import Theme from './Theme/Theme'
 import './stylesHome.css'
-import {login,listSelector} from '../store/reducers/usuarios'
+import {login,listSelector, addUser} from '../store/reducers/usuarios'
 import {UseAppDispatch,UseAppSelector} from '../store/index'
 
 const Home = () => {
@@ -30,9 +30,10 @@ const Home = () => {
    
 
    const handleCadastro = () => {
+       
        navigate('/page3')
    }
-    
+  
     return(
        <Theme>
             <div className="telaLogin">

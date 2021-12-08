@@ -26,8 +26,6 @@
     "extends": [
       "react-app",
       "react-app/jest"
-      
-      
     ]
   },
   "browserslist": {
@@ -41,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/josimara-lima2/telaLogin.git",
+  "author": "Josimara <josybehlul@gmail.com>",
+  "license": "MIT"
 }
