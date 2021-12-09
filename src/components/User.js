@@ -1,4 +1,5 @@
-import React, { useEffect } from "react"
+/* eslint-disable array-callback-return */
+import React from "react"
 import Theme from './Theme/Theme'
 
 import Card from "./Card"
@@ -12,14 +13,15 @@ const User = () => {
     const list = UseAppSelector(listSelector)
     const nameLogin = list.usuarios.filter((item) => item.islogged=== true)
     let teste = 0
-  nameLogin.map((item,index)=> {
+    nameLogin.map((item,index)=> {
       if(item.islogged){
           teste = index
       }
-  })
+    })
+
 
   const logout = () => {
-      dispatch(logoutUser(teste))
+      dispatch(logoutUser(false))
       navigate('/')
   }
    

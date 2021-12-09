@@ -1,8 +1,8 @@
-import React,{useState, useEffect} from "react"
+import React,{useState} from "react"
 import { useNavigate } from "react-router"
 import Theme from './Theme/Theme'
 import './stylesHome.css'
-import {login,listSelector, addUser} from '../store/reducers/usuarios'
+import {login,listSelector} from '../store/reducers/usuarios'
 import {UseAppDispatch,UseAppSelector} from '../store/index'
 
 const Home = () => {
@@ -15,6 +15,8 @@ const Home = () => {
 
    const handleLogin = () => {
        let contador = 0
+       
+       // eslint-disable-next-line array-callback-return
        list.usuarios.map((item) => {
         
            if(item.nome === name && item.senha === passwordInput){

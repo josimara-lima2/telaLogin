@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../rootReducer";
 
@@ -32,10 +33,10 @@ const listSlice = createSlice({
     initialState,
     reducers:{
         login(state, action: PayloadAction<{nome:string,senha:string,logado:boolean}>){
-           state.usuarios.map((item,index) =>{
+           state.usuarios.map((item,index) => {
                if(action.payload.nome === item.nome && action.payload.senha === item.senha){
                    state.usuarios[index].islogged = action.payload.logado
-                  
+                 
                }
            })
         },
@@ -47,8 +48,12 @@ const listSlice = createSlice({
                 islogged:action.payload.islogged})
             
         },
-        logoutUser(state,action:PayloadAction<number>){
-            state.usuarios[action.payload].islogged = false
+        logoutUser(state,action:PayloadAction<boolean>){
+            state.usuarios.map((item) => {
+               if(item.islogged){
+                   item.islogged = action.payload
+               }
+            })
         },
         
     }
