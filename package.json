@@ -47,5 +47,8 @@
   "main": "index.js",
   "repository": "https://github.com/josimara-lima2/telaLogin.git",
   "author": "Josimara <josybehlul@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "postcss": "^8.4.26"
+  }
 }
